@@ -27,7 +27,7 @@ header img{
 }
 header h1{
     text-align: center;
-    padding: 20px;
+    font-size: 50px;
 }
 
 nav{
@@ -44,11 +44,14 @@ nav a{
     text-transform: uppercase;
     color: rgb(255, 255, 255);
 }
+nav a.active {
+    background-color: rgb(161, 87, 190);
+}
 nav a:hover{
     background-color: rgb(161, 87, 190);
 }
 
-section{
+section#main{
     background-color: rgb(255, 244, 197);
     grid-area: section;
     display: grid;
@@ -58,15 +61,15 @@ section{
     "description img";
     
 }
-section img{
+section#main img{
     height: 400px;
 }
-section h2{
+section#main h2{
     grid-area: title;
     text-align: center;
     font-style: italic;
 }
-section p{
+section#main p{
     grid-area: description;
     text-align: justify;
     font-style: oblique;
@@ -74,9 +77,14 @@ section p{
     padding: 20px;
 }
 
+section#cart  {
+
+
+}
 footer{
-    background-color: rgb(71, 255, 240);
+    background-color: #47fff0;
     grid-area: footer;
+    margin-top: auto;
 }
 footer nav{
     grid-area: nav;
@@ -91,6 +99,7 @@ footer nav a{
     text-decoration: none;
     text-transform: uppercase;
     color: rgb(0, 0, 0);
+
 }
 footer nav a:hover{
     background-color: rgb(72, 157, 255);
