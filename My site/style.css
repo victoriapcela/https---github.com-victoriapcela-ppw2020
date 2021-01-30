@@ -5,15 +5,15 @@ body{
 div#page {
     width: 1000px;
     margin: 0 auto;
-    display: grid;
+    
     grid-template-areas: 
     "header header"
     "nav nav"
     "section section"
     "footer footer"
     ;
-    grid-template-columns: auto 300px;
-    grid-template-rows: 100px 40px 400px 100px;
+    
+    grid-template-rows: 100px 40px auto 100px;
 
 }
 header{
@@ -62,7 +62,7 @@ section#main{
     
 }
 section#main img{
-    height: 400px;
+    width: 100%;
 }
 section#main h2{
     grid-area: title;
@@ -77,10 +77,53 @@ section#main p{
     padding: 20px;
 }
 
-section#cart  {
-
-
+.cartItem {
+    padding: 5px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+    width: 250px;
+    box-sizing: border-box;
+    margin: 10px auto;
+  }
+  .cartTitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: #888;
+  }
+  
+  .cartImg {
+    max-width: 60%;
+  }
+  
+  .cartPrice {
+    padding: 8px 0 5px;
+    font-size: 30px;
+    font-weight: 800;
+    color: orangered;
+  }
+  .cartButton {
+    border: none;
+    padding: 8px 0 5px;
+    margin: 8px 0 5px;
+  
+    cursor: pointer;
+    font-size: 14px;
+    color: orangered;
+    border-radius: 8px;
+    height: 40px;
+    width: 140px;
+  }
+  .cartButton:hover {
+    color: blueviolet;
+  }
+.cartContainer {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
 }
+
+
 footer{
     background-color: #47fff0;
     grid-area: footer;
